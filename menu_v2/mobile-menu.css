@@ -1,12 +1,16 @@
 @media (max-width: 1000px) {
-	.navbar_wrap .menu {
+	.container {
+		width: 400px;
+	}
+	.nav-wrapper .menu {
 		display: none;
 	}
-	.humb {
+
+	.hamb {
 		display: flex;
 		align-items: center;
 	}
-	.humb_field {
+	.hamb-field {
 		padding: 10px 20px;
 		cursor: pointer;
 	}
@@ -18,22 +22,25 @@
 		background: white;
 		transition: 0.3;
 	}
-	.menu_popup {
+
+	.popup-menu {
 		position: fixed;
-		top: 80px;
-		left: -100%;
-		width: 100%;
+		top: 60px;
+		right: -100%;
+		width: 80%;
 		height: 100%;
-		background-color: white;
+		background-color: rgb(6, 18, 68);
 		z-index: 100;
 		display: flex;
 		transition: 0.3s;
-	}
-	.open {
-		left: 0;
+		box-shadow: -3px 0 10px #000;
 	}
 
-	.menu_popup .menu {
+	.open {
+		right: 0;
+	}
+
+	.menu {
 		width: 100%;
 		height: 100%;
 		display: flex;
@@ -42,21 +49,24 @@
 		justify-content: start;
 	}
 
-	.menu_popup .menu > li {
+	.menu > li > a {
+		text-align: center;
+		display: block;
 		width: 100%;
-	}
-	.menu_popup .menu > li > a {
-		display: flex;
-		width: 100%;
-		justify-content: center;
+		font-size: 1.5rem;
 		padding: 20px 0;
-		font-weight: bold;
-		font-size: 1.3rem;
-		color: black;
+		transition: 0.2s ease;
 	}
 
-	.menu_popup .menu > li > a:hover {
-		background: black;
-		color: white;
+	.menu > li {
+		width: 100%;
+	}
+
+	.menu > li > a:hover {
+		font-size: 1.5rem;
+		padding: 20px 0;
+		color: #333;
+		background: #fff;
+		border-left: 4px solid blue;
 	}
 }
